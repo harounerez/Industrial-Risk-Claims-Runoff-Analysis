@@ -90,21 +90,6 @@ The comparison of methodologies reveals the trade-offs between interpretability 
 
 | File Name | Description |
 | :--- | :--- |
-| **`File Presentation.pdf`** | Document outlining the business context, problem statement, modeling requirements, and a detailed description of the claims data used. |
-| **`mathurance_report_team_33.pdf`** | The complete technical report, detailing the data analysis, the implementation of both the traditional (Chain-Ladder + GAM) and ML approaches, and a comprehensive comparison of the results. |
 | **`chain ladder + GAM.ipynb`** | **Jupyter Notebook** containing all code for data preprocessing, Run-Off Triangle creation, Chain-Ladder factor calculation, and the implementation of **GAMs** for reserving. |
 | **`simulation + ml.ipynb`** | **Jupyter Notebook** containing the code for data transformation, feature generation for supervised learning, training of **XGBoost** and **LightGBM** models, and the structure for post-modeling stochastic simulation. |
 
----
-
-## 💻 Getting Started
-
-To replicate the project results locally:
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/your-username/Industrial-Risk-Claims-Runoff-Analysis.git](https://github.com/your-username/Industrial-Risk-Claims-Runoff-Analysis.git)
-    cd Industrial-Risk-Claims-Runoff-Analysis
-    ```
-2.  **Install dependencies:** Ensure you have Python 3.x and the necessary libraries (e.g., `numpy`, `pandas`, `scikit-learn`, `chainladder`, `pygam`, `xgboost`, `lightgbm`).
-3.  **Run the notebooks:** Execute the cells in the **`chain ladder + GAM.ipynb`** and **`simulation + ml.ipynb`** notebooks to follow the modeling workflow and generate the final reserve predictions.
