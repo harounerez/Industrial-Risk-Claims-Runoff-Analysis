@@ -25,7 +25,6 @@ The core objective is to design a high-performance predictive model that achieve
 
 The project follows a structured data-to-prediction pipeline that integrates both classical and advanced methods at different stages.
 
-**The image link below assumes the file is in an `images/` directory.**
 
 ![Claims Reserving Solution Pipeline Diagram](images/solution_pipeline.webp)
 
@@ -73,8 +72,6 @@ We developed and compared two primary, complementary modeling streams to ensure 
 ## 📈 Results and Visual Analysis
 
 The comparison of methodologies reveals the trade-offs between interpretability and predictive accuracy.
-
-**The image link below assumes the file is in an `images/` directory.**
 
 ![Comparative Analysis and EDA Plots](images/plots.webp)
 
