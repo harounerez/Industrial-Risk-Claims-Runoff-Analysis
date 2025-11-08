@@ -69,20 +69,6 @@ We developed and compared two primary, complementary modeling streams to ensure 
 
 ---
 
-## 📈 Results and Visual Analysis
-
-The comparison of methodologies reveals the trade-offs between interpretability and predictive accuracy.
-
-![Comparative Analysis and EDA Plots](images/plots.webp)
-
-**Figure 2: Comparative Analysis Plots**
-> These plots visualize key findings from the Exploratory Data Analysis (EDA) and the model evaluation:
-> * **Annual Claim Settlements:** Shows the trend of total `Règlement` (settlement amount) over the different years of settlement (`Exercice`).
-> * **Claims Distribution by Product:** Illustrates the volume of claims across various `Code Produit` and `Désignation Produit`, highlighting the most frequent lines of business.
-> * **Model Performance Comparison:** Displays a comparison of key metrics (e.g., MAE, RMSE) between the **Traditional Chain-Ladder** approach and the **Machine Learning** models, demonstrating the superior predictive accuracy gained from the latter.
-
----
-
 ## 📂 Repository Contents
 
 | File Name | Description |
