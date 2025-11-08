@@ -25,7 +25,9 @@ The core objective is to design a high-performance predictive model that achieve
 
 The project follows a structured data-to-prediction pipeline that integrates both classical and advanced methods at different stages.
 
+**The image link below assumes the file is in an `images/` directory.**
 
+![Claims Reserving Solution Pipeline Diagram](images/solution_pipeline.webp)
 
 **Figure 1: Solution Pipeline Diagram**
 > This diagram illustrates the two main parallel approaches: the **Traditional Actuarial Path** (Chain-Ladder and GAM) and the **Supervised Machine Learning Path** (Feature Engineering followed by XGBoost/LightGBM). Both paths feed into the final prediction and reserve calculation.
@@ -57,14 +59,14 @@ We developed and compared two primary, complementary modeling streams to ensure 
 
 ### 1. Actuarial and Statistical Reserving (Traditional Approach)
 
-* **Chain-Ladder Method:** Implemented as the foundational model to derive **Link Ratio Factors** and calculate the traditional reserve estimate, serving as a crucial industry benchmark.
+* **Chain-Ladder Method:** Implemented as the foundational model to derive **Link Ratio Factors** and calculate the traditional reserve estimate.
 * **Generalized Additive Models (GAM):** Used to model development factors or claims payments, offering a flexible, non-linear alternative to standard linear models while maintaining high **interpretability**.
 
 ### 2. Machine Learning and Simulation (Predictive Approach)
 
-* **Feature Engineering:** The claims data is unrolled from a triangle structure into a flat dataset suitable for ML training, incorporating features like Occurrence Year, Development Lag, and Product Category.
+* **Feature Engineering:** The Run-Off Triangle is unrolled into a flat dataset suitable for ML training, incorporating features like Occurrence Year, Development Lag, and Product Category.
 * **Gradient Boosting Models:** **XGBoost Regressor** and **LightGBM Regressor** were utilized for their superior predictive power in complex, tabular data.
-* **Stochastic Simulation:** The final predictions from the ML models can be used as inputs for a **Monte Carlo Simulation** framework to generate a full reserve distribution, thereby quantifying the **Prediction Risk**.
+* **Stochastic Simulation:** The final predictions can be used for a **Monte Carlo Simulation** to generate a full reserve distribution and quantify **Prediction Risk**.
 
 ---
 
@@ -72,7 +74,9 @@ We developed and compared two primary, complementary modeling streams to ensure 
 
 The comparison of methodologies reveals the trade-offs between interpretability and predictive accuracy.
 
+**The image link below assumes the file is in an `images/` directory.**
 
+![Comparative Analysis and EDA Plots](images/plots.webp)
 
 **Figure 2: Comparative Analysis Plots**
 > These plots visualize key findings from the Exploratory Data Analysis (EDA) and the model evaluation:
@@ -86,6 +90,8 @@ The comparison of methodologies reveals the trade-offs between interpretability 
 
 | File Name | Description |
 | :--- | :--- |
+| **`File Presentation.pdf`** | Document outlining the business context, problem statement, modeling requirements, and a detailed description of the claims data used. |
+| **`mathurance_report_team_33.pdf`** | The complete technical report, detailing the data analysis, the implementation of both the traditional (Chain-Ladder + GAM) and ML approaches, and a comprehensive comparison of the results. |
 | **`chain ladder + GAM.ipynb`** | **Jupyter Notebook** containing all code for data preprocessing, Run-Off Triangle creation, Chain-Ladder factor calculation, and the implementation of **GAMs** for reserving. |
 | **`simulation + ml.ipynb`** | **Jupyter Notebook** containing the code for data transformation, feature generation for supervised learning, training of **XGBoost** and **LightGBM** models, and the structure for post-modeling stochastic simulation. |
 
@@ -97,8 +103,8 @@ To replicate the project results locally:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-    cd your-repo-name
+    git clone [https://github.com/your-username/Industrial-Risk-Claims-Runoff-Analysis.git](https://github.com/your-username/Industrial-Risk-Claims-Runoff-Analysis.git)
+    cd Industrial-Risk-Claims-Runoff-Analysis
     ```
 2.  **Install dependencies:** Ensure you have Python 3.x and the necessary libraries (e.g., `numpy`, `pandas`, `scikit-learn`, `chainladder`, `pygam`, `xgboost`, `lightgbm`).
-3.  **Run the notebooks:** Start by reviewing the technical report, then execute the cells in the **`chain ladder + GAM.ipynb`** and **`simulation + ml.ipynb`** notebooks to follow the modeling workflow and generate the final reserve predictions.
+3.  **Run the notebooks:** Execute the cells in the **`chain ladder + GAM.ipynb`** and **`simulation + ml.ipynb`** notebooks to follow the modeling workflow and generate the final reserve predictions.
